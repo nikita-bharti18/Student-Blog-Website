@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Dashboard</h2>
+
+<a href="/create" class="btn btn-primary mb-3">Create New Post</a>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for post in posts %}
+
+    <tr>
+        <td>{{ post.id }}</td>
+        <td>{{ post.title }}</td>
+
+        <td>
+            <a href="/edit/{{ post.id }}" class="btn btn-warning btn-sm">Edit</a>
+
+            <a href="/delete/{{ post.id }}" class="btn btn-danger btn-sm">Delete</a>
+        </td>
+    </tr>
+
+    {% endfor %}
+</table>
+
+{% endblock %}
