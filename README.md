@@ -115,7 +115,6 @@ Example:
 ## Author
 
 Nikita Bharti
-nikita-bharti18
 
 ---
 
